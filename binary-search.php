@@ -1,6 +1,6 @@
 <?php
 //binary search in php
-function searchElm($arr,$key) {
+function searchElm(Array $arr,$key) {
     $begin = 0;
     $end = count($arr) -1;
     $inedx = -1;
