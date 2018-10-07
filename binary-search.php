@@ -7,13 +7,13 @@ function searchElm($arr,$key) {
     
     while ($begin<=$end) {
         echo $begin.'<br>';
-        $mid = ceil(($begin+$end) /2 );
+        $mid = (int)ceil(($begin+$end) /2 );
         if($key == $arr[$mid]) {
             $index = $mid;
             $end = $mid-1;
         }
-        if($key < $arr[$mid])  $end = $mid -1;
-        if($key > $arr[$mid])  $begin = $mid +1;
+        if($key < $arr[$mid])  {$end = $mid -1;}
+    if($key > $arr[$mid]) { $begin = $mid +1;}
     
     }
     return $index;
