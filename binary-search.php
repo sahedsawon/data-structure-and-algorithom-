@@ -6,15 +6,13 @@ function searchElm($arr,$key) {
     $inedx = -1;
     
     while ($begin<=$end) {
-        echo $begin.'<br>';
         $mid = (int)ceil(($begin+$end) /2 );
         if($key == $arr[$mid]) {
             $index = $mid;
             $end = $mid-1;
         }
         if($key < $arr[$mid])  {$end = $mid -1;}
-    if($key > $arr[$mid]) { $begin = $mid +1;}
-    
+        if($key > $arr[$mid]) { $begin = $mid +1;}
     }
     return $index;
 }
